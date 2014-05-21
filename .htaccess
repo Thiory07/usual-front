@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteRule ^index.php$ / [R,L]
+
+RewriteRule ^sitemap.xml$ includes/sitemap.php [NC,L]
+
+RewriteRule ^([a-z\-]+)$ ?rota=view/$1 [NC,L]
+
+RewriteRule ^([a-z\-]+)-(.*)$ ?rota=view/$1-$2 [NC,L]

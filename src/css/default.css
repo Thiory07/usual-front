@@ -1,0 +1,180 @@
+/* PADRÃO DE TODOS OS SITES */
+	*, *:before, *:after {
+	  -moz-box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+	/*
+		Hack para o like-box do facebook ser responsivo.
+	*/
+		.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+		    width: 100% !important;
+		}
+		#fb-root {
+		    display: none;
+		}
+	body{ background-color: #FFF;}
+	body, p,a {color: #000;}
+	body, html, ul, p, figure,h2,h3,h1{margin:0; padding: 0; }
+	li{list-style: none;}
+	a{text-decoration: none;}
+	img{border: 0 solid transparent;}
+	address{font-style: normal;}
+	section, article, aside, header, footer, nav, dialog, figure {display:block;}
+	input,textarea{font-family: inherit; box-sizing: border-box; -moz-box-sizing: border-box; resize: none;}
+	body {
+		font-size: 16px;
+		font-family: Arial, sans-serif;
+	}
+
+	.l-centro {
+		margin: 0 auto;
+	}
+	.hide {
+		display: none;
+	}
+	.l-bold {
+		font-weight: bold;
+	}
+	.l-relative {
+		position: relative;
+	}
+	.l-absolute {
+		position: absolute;
+	}
+	/*
+		Class para definir tamanho util do site,
+		width: 90% é usado para criar margens quando
+		a janela for menor que o max-width e ideal para
+		margem nos mobiles.
+	*/
+	.l-area-util {
+		max-width: 960px;
+		width: 90%;
+	}
+	/*
+		Alinhar inline-block elementos justificado
+		ideal para menu, e divs distribuida igualmente
+		pela tela
+	*/
+	.l-alinhar {
+	    text-align: justify;
+	}
+	.l-alinhar:after {
+	    content: " ";
+	    display: inline-block;
+	    width: 100%;
+	}
+	.txt-centro {
+		text-align: center;
+	}
+	.txt-dir {
+		text-align: right;
+	}
+	.txt-esq {
+		text-align: left;
+	}
+	.l-fl-esq {
+		float: left;
+	}
+	.l-fl-dir {
+		float: right;
+	}
+	.l-iblock {
+		display: inline-block;
+	}
+	.l-block {
+		display: block;
+	}
+	.l-uppercase {
+		text-transform: uppercase;
+	}
+
+	/*
+		Frações de tamanhos de elementos, para inserir
+		direto no html.
+	*/
+		.l-meio {
+			width: 47.5%;
+		}
+		.l-um-terco {
+			width: 30%;
+		}
+		.l-dois-tercos {
+			width: 65%;
+		}
+		.l-um-quarto {
+			width: 21.25%;
+		}
+		.l-cheio {
+			width: 100%;
+		}
+
+	/* 
+		ADICIONAR NA DIV PAI, QUANDO FOR USAR 
+		INLINE BLOCK PARA OS FILHOS.
+	*/
+		.l-va-t > * {
+			vertical-align: top;
+		}
+	/*
+		Adiciona quebra no responsivo.
+		Ex: Se a div tem 50% de width ela para
+		de diminuir quando chega no mobile;
+	*/
+	.l-min-mobile {
+		min-width: 270px;
+	}
+	/*
+		Puxa metade do elemento para cima.
+		Ideal para centralizar verticalmente imagens
+		dentro de um container.
+	*/
+		.l-translate-y {
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	/*
+		Puxa metade do elemento para esquerda.
+		Ideal para centralizar horizontalmente imagens
+		dentro de um container.
+	*/
+		.l-translate-x {
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+		}
+	
+	/* 
+		Código padrão usado para fazer o menu do site
+		fizer retrátil no mobile.
+	*/
+	.submenu {
+		padding-left: 45px;
+		background-image: url("../imagens/submenu.png");
+		background-repeat: no-repeat;
+		-webkit-background-size: 35px auto;
+		background-size: 35px auto;
+		background-position: 5px 5px;
+		text-align: left;
+		cursor: pointer;
+		margin: 20px 0 10px 0;
+	}
+
+	@media screen and (max-width: 600px) {
+		header nav#menu ul li {
+			display: none;
+			margin-top: 10px;
+		}
+		nav#menu h1 {
+			display: block !important;
+			font-size: 30px;
+		}
+		header nav#menu {
+		    width: 100%;
+		    text-align: left;
+		}
+	}
