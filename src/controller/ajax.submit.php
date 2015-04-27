@@ -1,5 +1,5 @@
-<?PHP
-$destinatario = "matheus@dgoh.org";
+<?php
+$destinatario = "default-email";
 $email = $destinatario;
 $enctype = "text/html";
 $assunto = "Contato Site";
